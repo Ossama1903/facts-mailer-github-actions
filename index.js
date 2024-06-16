@@ -36,6 +36,8 @@ app.get("/send-fun-fact", (req, res) => {
   const recipients = [
     "sheikhusamabilal@gmail.com",
     // "m.zainhassanbaloch@gmail.com",
+    "zain57ul@gmail.com",
+    "dev.mzain@gmail.com",
   ];
 
   // Email content
