@@ -1,6 +1,7 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const fs = require("fs");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
@@ -18,6 +19,14 @@ let transporter = nodemailer.createTransport({
   },
 });
 
+const generateEmailHTML = (fact) => {
+  const template = fs.readFileSync(
+    path.join(__dirname, "emailTemplate.html"),
+    "utf8"
+  );
+  return template.replace("{{facts}}", fact);
+};
+
 // Route to send fun fact email
 app.get("/send-fun-fact", (req, res) => {
   // Select a random fun fact
@@ -26,7 +35,7 @@ app.get("/send-fun-fact", (req, res) => {
   // List of recipients
   const recipients = [
     "sheikhusamabilal@gmail.com",
-    "m.zainhassanbaloch@gmail.com",
+    // "m.zainhassanbaloch@gmail.com",
   ];
 
   // Email content
@@ -34,7 +43,7 @@ app.get("/send-fun-fact", (req, res) => {
     from: process.env.EMAIL,
     to: recipients.join(", "),
     subject: "Here's your fun fact of the day!",
-    text: randomFact,
+    html: generateEmailHTML(randomFact),
   };
 
   // Send email
