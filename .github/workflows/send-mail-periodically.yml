@@ -1,8 +1,9 @@
 name: Send Fun Fact Email
 
 on:
-  schedule:
-    - cron: '*/5 * * * *' # Runs every 5 minutes
+  push:
+    branches:
+      - main
 
 jobs:
   send-fun-fact-email:
