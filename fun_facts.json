@@ -1,0 +1,143 @@
+[
+  {
+    "fact": "React's Virtual DOM is a lightweight representation of the actual DOM. When the state of a component changes, React updates the Virtual DOM, then it uses a diffing algorithm to compare the changes with the previous state. Only the differences are applied to the actual DOM, minimizing the number of manipulations and improving performance."
+  },
+  {
+    "fact": "React Fiber is the new reconciliation engine in React 16 and above, which improves its ability to manage component updates. Fiber breaks the rendering work into units of work, allowing React to pause and resume work, resulting in smoother updates and better handling of animations and complex UI transitions."
+  },
+  {
+    "fact": "React's Concurrent Mode is a set of new features that help React apps stay responsive and gracefully adjust to the user's device capabilities and network speed. It allows React to work on multiple tasks at once and prioritize urgent updates, ensuring that the user interface remains responsive."
+  },
+  {
+    "fact": "React's useReducer hook is an alternative to useState for managing state logic that involves multiple sub-values or when the next state depends on the previous one. It provides a way to handle complex state transitions using reducers, which are functions that take the current state and an action and return a new state."
+  },
+  {
+    "fact": "React's useMemo hook is used to memoize expensive calculations, preventing them from being recalculated on every render unless one of the dependencies has changed. This optimization helps to improve the performance of functional components by avoiding unnecessary re-computation."
+  },
+  {
+    "fact": "React's useCallback hook is used to memoize callback functions, ensuring that the same function instance is returned unless one of the dependencies has changed. This is particularly useful for optimizing child component re-renders and preventing unnecessary re-renders in complex component trees."
+  },
+  {
+    "fact": "React's Context API provides a way to pass data through the component tree without having to pass props down manually at every level. It is often used for global state management, theming, and user authentication. The createContext function is used to create a context object, and the useContext hook is used to access the context value."
+  },
+  {
+    "fact": "React's Suspense allows you to suspend rendering of a component tree until some condition is met, such as data loading or lazy loading of components. Suspense works with React's Concurrent Mode to keep the UI responsive while waiting for asynchronous operations to complete. It provides a fallback component to display while the main content is being prepared."
+  },
+  {
+    "fact": "React's Error Boundaries are components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the whole application. Error Boundaries are created using the componentDidCatch lifecycle method or the static getDerivedStateFromError method in class components."
+  },
+  {
+    "fact": "React's Fragments allow you to group multiple elements without adding an extra node to the DOM. This is useful for rendering lists of items or wrapping multiple components without introducing additional markup. Fragments can be created using the React.Fragment component or the shorthand syntax <>...</>."
+  },
+  {
+    "fact": "React's Portals provide a way to render children into a DOM node that exists outside the hierarchy of the parent component. This is useful for implementing modals, tooltips, and other UI elements that need to appear above other content. Portals are created using the ReactDOM.createPortal method."
+  },
+  {
+    "fact": "React's Refs provide a way to access and interact with DOM elements or React elements directly. Refs are created using the React.createRef function or the useRef hook. They can be used to focus input fields, trigger animations, or integrate with third-party libraries that manipulate the DOM."
+  },
+  {
+    "fact": "React's useLayoutEffect hook is similar to useEffect, but it fires synchronously after all DOM mutations. It is useful for reading layout from the DOM and synchronously re-rendering to avoid visual inconsistencies. useLayoutEffect can be used for tasks such as measuring the size of an element or adjusting the scroll position."
+  },
+  {
+    "fact": "React's useImperativeHandle hook customizes the instance value that is exposed when using refs. It allows you to define which properties and methods of a component are accessible to the parent component. This hook is typically used in combination with forwardRef to create reusable components that provide a controlled API."
+  },
+  {
+    "fact": "React's StrictMode is a tool for highlighting potential problems in an application. It activates additional checks and warnings for its descendants. StrictMode helps identify unsafe lifecycle methods, legacy string ref API usage, and other potential issues in the application, making it easier to migrate to future versions of React."
+  },
+  {
+    "fact": "React's JSX is a syntax extension that allows you to write HTML-like code within JavaScript. JSX is transformed into React.createElement calls, creating a virtual representation of the DOM. JSX improves code readability and helps to describe the structure of the user interface declaratively."
+  },
+  {
+    "fact": "React's hooks must be called in the same order on every render. This rule ensures that React can correctly associate hook calls with their corresponding state and effects. Hooks cannot be called conditionally, within loops, or nested functions, except within custom hooks."
+  },
+  {
+    "fact": "React's useEffect hook runs side-effects in function components. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in class components. The useEffect hook can be used to fetch data, set up subscriptions, and perform other side-effect operations."
+  },
+  {
+    "fact": "React's useState hook is a way to add state to functional components. It returns a stateful value and a function to update it. The useState hook can be called multiple times in a single component to manage multiple pieces of state independently."
+  },
+  {
+    "fact": "React's useRef hook returns a mutable ref object whose .current property is initialized to the passed argument. The returned object will persist for the full lifetime of the component. useRef is useful for accessing DOM elements or storing mutable values that do not cause re-renders when changed."
+  },
+  {
+    "fact": "React's useContext hook accepts a context object and returns the current context value for that context. The useContext hook simplifies accessing context values without the need for higher-order components or render props, making it easier to manage global state and dependencies."
+  },
+  {
+    "fact": "React's useMemo hook can optimize performance by memoizing the result of a calculation. It only recomputes the memoized value when one of the dependencies has changed. This is useful for expensive calculations that do not need to be repeated on every render, improving performance by avoiding unnecessary recalculations."
+  },
+  {
+    "fact": "React's useCallback hook returns a memoized callback function. It only changes if one of the dependencies has changed. This is useful for passing stable callback references to child components, preventing unnecessary re-renders and improving performance in complex component trees."
+  },
+  {
+    "fact": "React's lazy function lets you render a dynamic import as a regular component. This is useful for code-splitting and reducing the initial load time of your application. React.lazy works with Suspense to display a fallback component while the lazy-loaded component is being fetched."
+  },
+  {
+    "fact": "React's Suspense allows you to handle asynchronous rendering by displaying a fallback UI while waiting for asynchronous operations to complete. It works with React.lazy for code-splitting, and with concurrent rendering features to keep the UI responsive. Suspense can be used to manage loading states and improve user experience."
+  },
+  {
+    "fact": "React's Error Boundaries are components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the whole application. Error Boundaries are implemented using the componentDidCatch lifecycle method or the static getDerivedStateFromError method in class components."
+  },
+  {
+    "fact": "React's StrictMode is a development mode tool that helps you identify potential problems in your application. It activates additional checks and warnings for its descendants, such as identifying unsafe lifecycle methods and legacy string ref API usage. StrictMode is used to ensure your code is resilient and ready for future updates."
+  },
+  {
+    "fact": "React's Portals provide a way to render children into a DOM node that exists outside the hierarchy of the parent component. This is useful for implementing UI elements that need to appear above other content, such as modals, tooltips, and dropdowns. Portals are created using the ReactDOM.createPortal method."
+  },
+  {
+    "fact": "React's Refs provide a way to access and interact with DOM elements or React elements directly. Refs are created using the React.createRef function or the useRef hook. They are used for tasks such as focusing input fields, triggering animations, or integrating with third-party libraries that manipulate the DOM."
+  },
+  {
+    "fact": "React's useLayoutEffect hook is similar to useEffect, but it fires synchronously after all DOM mutations. This is useful for reading layout from the DOM and synchronously re-rendering to avoid visual inconsistencies. useLayoutEffect can be used for tasks such as measuring the size of an element or adjusting the scroll position."
+  },
+  {
+    "fact": "React's useImperativeHandle hook customizes the instance value that is exposed when using refs. It allows you to define which properties and methods of a component are accessible to the parent component. This hook is typically used in combination with forwardRef to create reusable components that provide a controlled API."
+  },
+  {
+    "fact": "React's Context API provides a way to pass data through the component tree without having to pass props down manually at every level. It is often used for global state management, theming, and user authentication. The createContext function is used to create a context object, and the useContext hook is used to access the context value."
+  },
+  {
+    "fact": "React's useReducer hook is an alternative to useState for managing state logic that involves multiple sub-values or when the next state depends on the previous one. It provides a way to handle complex state transitions using reducers, which are functions that take the current state and an action and return a new state."
+  },
+  {
+    "fact": "React's Hooks API allows you to use state and other React features in functional components. Hooks provide a more concise and flexible way to manage component state, side effects, and lifecycle events compared to class components. They enable you to write cleaner and more reusable code, improving maintainability and readability."
+  },
+  {
+    "fact": "React's Concurrent Mode is a set of new features that help React apps stay responsive and gracefully adjust to the user's device capabilities and network speed. It allows React to work on multiple tasks at once and prioritize urgent updates, ensuring that the user interface remains responsive. Concurrent Mode includes features like time slicing, suspense, and concurrent rendering."
+  },
+  {
+    "fact": "React's Virtual DOM is a lightweight representation of the actual DOM. When the state of a component changes, React updates the Virtual DOM, then it uses a diffing algorithm to compare the changes with the previous state. Only the differences are applied to the actual DOM, minimizing the number of manipulations and improving performance."
+  },
+  {
+    "fact": "React's Fiber is the new reconciliation engine in React 16 and above, which improves its ability to manage component updates. Fiber breaks the rendering work into units of work, allowing React to pause and resume work, resulting in smoother updates and better handling of animations and complex UI transitions."
+  },
+  {
+    "fact": "React's JSX is a syntax extension that allows you to write HTML-like code within JavaScript. JSX is transformed into React.createElement calls, creating a virtual representation of the DOM. JSX improves code readability and helps to describe the structure of the user interface declaratively. It also supports embedding JavaScript expressions within HTML, making it easy to dynamically generate content."
+  },
+  {
+    "fact": "React's useEffect hook runs side-effects in function components. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in class components. The useEffect hook can be used to fetch data, set up subscriptions, and perform other side-effect operations. It accepts a cleanup function to clean up any side effects when the component is unmounted or before re-running the effect."
+  },
+  {
+    "fact": "React's useState hook is a way to add state to functional components. It returns a stateful value and a function to update it. The useState hook can be called multiple times in a single component to manage multiple pieces of state independently. It supports lazy initialization and functional updates, providing flexibility in managing component state."
+  },
+  {
+    "fact": "React's useRef hook returns a mutable ref object whose .current property is initialized to the passed argument. The returned object will persist for the full lifetime of the component. useRef is useful for accessing DOM elements or storing mutable values that do not cause re-renders when changed. It can also be used to keep track of previous state values or store instances of external libraries."
+  },
+  {
+    "fact": "React's useContext hook accepts a context object and returns the current context value for that context. The useContext hook simplifies accessing context values without the need for higher-order components or render props, making it easier to manage global state and dependencies. It ensures that the component re-renders when the context value changes."
+  },
+  {
+    "fact": "React's useMemo hook can optimize performance by memoizing the result of a calculation. It only recomputes the memoized value when one of the dependencies has changed. This is useful for expensive calculations that do not need to be repeated on every render, improving performance by avoiding unnecessary recalculations. It helps to prevent unnecessary re-renders and improves the overall performance of functional components."
+  },
+  {
+    "fact": "React's useCallback hook returns a memoized callback function. It only changes if one of the dependencies has changed. This is useful for passing stable callback references to child components, preventing unnecessary re-renders and improving performance in complex component trees. It helps to optimize components that rely on reference equality checks to prevent unnecessary updates."
+  },
+  {
+    "fact": "React's lazy function lets you render a dynamic import as a regular component. This is useful for code-splitting and reducing the initial load time of your application. React.lazy works with Suspense to display a fallback component while the lazy-loaded component is being fetched. It helps to improve the performance of your application by loading components only when they are needed."
+  },
+  {
+    "fact": "React's Error Boundaries are components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the whole application. Error Boundaries are implemented using the componentDidCatch lifecycle method or the static getDerivedStateFromError method in class components. They help to improve the user experience by gracefully handling errors and providing a way to recover from them."
+  },
+  {
+    "fact": "React's Context API provides a way to pass data through the component tree without having to pass props down manually at every level. It is often used for global state management, theming, and user authentication. The createContext function is used to create a context object, and the useContext hook is used to access the context value. Context helps to avoid prop drilling and makes it easier to share state across deeply nested components."
+  }
+]
